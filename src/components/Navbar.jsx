@@ -58,11 +58,20 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex-none">
-        <div className="text-1xl underline">
-                  {!isLoggedIn && <Link to="/signUp">Registrieren</Link>}
-                
-        </div>
 
+        {!isLoggedIn && (
+          <Link className="btn btn-ghost mr-4 hover:bg-opacity-50" to="/signUp">
+            Registrieren
+          </Link>
+        )}
+        {isAdmin && (
+          <Link
+            className="btn btn-ghost mr-4 hover:bg-opacity-50"
+            to="/admin-panel/bookings"
+          >
+            <img src={AdminPanelLogo} alt="settingLogo" />
+          </Link>
+        )}
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
