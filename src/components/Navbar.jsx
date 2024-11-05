@@ -93,7 +93,7 @@ export default function Navbar() {
             <img src={AdminPanelLogo} alt="settingLogo" />
           </Link>
         )}
-
+        
         <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
